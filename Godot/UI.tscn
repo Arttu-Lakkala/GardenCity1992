@@ -1,0 +1,90 @@
+[gd_scene format=2]
+
+[node name="UI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.41428
+margin_top = -1.12131
+margin_right = -1.41431
+margin_bottom = -1.12134
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Food Production" type="Label" parent="."]
+margin_left = 10.0
+margin_top = 20.0
+margin_right = 337.0
+margin_bottom = 53.0
+text = "Food Production: Total (Deficit/surplus amount)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Material Production" type="Label" parent="."]
+margin_left = 10.0
+margin_top = 40.0
+margin_right = 182.0
+margin_bottom = 54.0
+text = "Material Production: Total"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Solidarity" type="Label" parent="."]
+margin_left = 10.0
+margin_top = 60.0
+margin_right = 751.0
+margin_bottom = 74.0
+text = "Solidarity: (0-100)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Happiness" type="Label" parent="."]
+margin_left = 10.0
+margin_top = 80.0
+margin_right = 178.0
+margin_bottom = 94.0
+text = "Overall happiness: (0-100)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Population" type="Label" parent="."]
+margin_left = 10.0
+margin_top = 100.0
+margin_right = 117.0
+margin_bottom = 114.0
+text = "Total Population:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Workers" type="Label" parent="."]
+margin_left = 10.0
+margin_top = 120.0
+margin_right = 71.0
+margin_bottom = 134.0
+text = "Workers::"
+
+[node name="Turn Button" type="Label" parent="."]
+margin_left = 910.0
+margin_top = 563.0
+margin_right = 1004.0
+margin_bottom = 588.0
+text = "Turn Button?"
+percent_visible = -0.0909091
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Date or Turn Count" type="Label" parent="."]
+margin_left = 900.0
+margin_top = 20.0
+margin_right = 940.0
+margin_bottom = 34.0
+text = "Date/Turn Count"
+__meta__ = {
+"_edit_use_anchors_": false
+}
