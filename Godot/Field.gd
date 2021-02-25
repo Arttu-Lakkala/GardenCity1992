@@ -29,13 +29,17 @@ func nextTurn():
 	if underConstruction:
 		state = makeInto
 		if state == 1:
-			modulate = Color(0, 0, 255)
+			get_node("building/plant").visible = false
 			industryProduction = 50
 			makeInto = 2
 		if state == 2:
-			modulate = Color(0, 255,  0)
+			get_node("building/plant").visible = true
 			foodProduction = 50
+			industryProduction = 50
 			makeInto = 1
+		
+		$ReadySound.play()
+		get_node("building/Construction").visible = false
 		underConstruction = false
 	
 #function for clicking on this object
@@ -46,6 +50,7 @@ func _on_Field_input_event(viewport, event, shape_idx):
 			city.industry = city.industry - 100
 			industryProduction = 0
 			foodProduction = 0
+			get_node("building/Construction").visible = true
 			underConstruction = true
+			$ConstructionSound.play()
 			state = 0
-			modulate = Color(255, 0, 0)
