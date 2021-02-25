@@ -20,7 +20,6 @@ var city
 # initalize variables
 func _ready():
 	city = get_parent()
-	print(city)
 
 #what to do when turn changes
 func nextTurn():

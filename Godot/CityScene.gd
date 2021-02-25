@@ -8,6 +8,7 @@ export var startingLabor = 0
 #(Normal variables)
 #list of numbers/others we need to keep track of
 
+var turn = 1
 var food = startingFood
 var industry = startingIndustry
 var labor = startingLabor
@@ -18,13 +19,14 @@ func _ready():
 
 #what happens when player passes turn
 func nextTurn():
+	turn = turn + 1
 	for child in get_children():
 		#checks all children for a method named nextTurn
 		#if it is found we exectude that method
 		if child.has_method("nextTurn"):
 			child.nextTurn()
-	print("we have " + str(food) + " food")
-	print("we have " + str(industry) + " industry")
+	
+	
 
 
 #Normal process of the game this is where we check for key presses etc.
