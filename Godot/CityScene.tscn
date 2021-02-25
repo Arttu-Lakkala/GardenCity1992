@@ -9,8 +9,9 @@
 script = ExtResource( 2 )
 
 [node name="Placeholder" type="Sprite" parent="."]
-modulate = Color( 0.0235294, 0.203922, 0.00784314, 1 )
-position = Vector2( 583.99, 321.414 )
+modulate = Color( 0.168627, 0.482353, 0.0784314, 1 )
+position = Vector2( 512.294, 301.354 )
+scale = Vector2( 4.8808, 5.55342 )
 texture = ExtResource( 1 )
 
 [node name="Field" parent="." instance=ExtResource( 3 )]

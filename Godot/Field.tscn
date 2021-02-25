@@ -25,8 +25,8 @@ texture = ExtResource( 3 )
 
 [node name="Construction" type="Sprite" parent="building"]
 visible = false
-position = Vector2( -194.664, -342.176 )
-scale = Vector2( 0.243421, 0.631518 )
+position = Vector2( -198.024, -312.102 )
+scale = Vector2( 1.93703, 2.88001 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
