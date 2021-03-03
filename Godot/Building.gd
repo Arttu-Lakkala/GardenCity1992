@@ -42,7 +42,7 @@ func nextTurn():
 		underConstruction = false
 	
 #function for clicking on this object
-func _on_Field_input_event(viewport, event, shape_idx):
+func _on_Building_input_event(viewport, event, shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
 		if (city.industry >= 100 && not underConstruction):
 			#add more construction options here

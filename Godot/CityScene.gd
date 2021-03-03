@@ -4,6 +4,8 @@ extends Node2D
 export var startingFood = 0
 export var startingIndustry = 0
 export var startingLabor = 0
+export var startingSolidarity = 75
+export var startingPopulation = 0
 
 #(Normal variables)
 #list of numbers/others we need to keep track of
@@ -12,6 +14,8 @@ var turn = 1
 var food = startingFood
 var industry = startingIndustry
 var labor = startingLabor
+var solidarity = startingSolidarity
+var population = startingPopulation
 #initalization
 func _ready():
  pass
