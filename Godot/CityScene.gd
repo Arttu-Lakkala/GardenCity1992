@@ -1,21 +1,11 @@
 extends Node2D
 
-#Exported variables(easy to change) (Dont change in script)
-export var startingFood = 0
-export var startingIndustry = 0
-export var startingLabor = 0
-export var startingSolidarity = 75
-export var startingPopulation = 0
-
-#(Normal variables)
-#list of numbers/others we need to keep track of
-
+export var food = 0
+export var industry = 0
+export var labor = 0
+export var solidarity = 75
+export var population = 0
 var turn = 1
-var food = startingFood
-var industry = startingIndustry
-var labor = startingLabor
-var solidarity = startingSolidarity
-var population = startingPopulation
 #initalization
 func _ready():
  pass

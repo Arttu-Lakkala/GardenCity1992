@@ -1,7 +1,7 @@
 extends Area2D
 
 
-#Exported variables(easy to change) (Dont change in script)
+#Exported variables(easy to change in eidtor) (Dont change in script)
 export var startingIndustryProduction = 50
 export var startingFoodProduction = 0
 
@@ -14,6 +14,7 @@ var underConstruction = false
 var state = 1
 var makeInto = 2
 var city
+var active = false;
 
 
 # Called when the node enters the scene tree for the first time.
@@ -40,6 +41,12 @@ func nextTurn():
 		$ReadySound.play()
 		get_node("building/Construction").visible = false
 		underConstruction = false
+
+#happens when building gets activated
+func activate():
+	active = true
+	print("hep")
+	get_node("building/Construction").visible = true
 	
 #function for clicking on this object
 func _on_Building_input_event(viewport, event, shape_idx):
