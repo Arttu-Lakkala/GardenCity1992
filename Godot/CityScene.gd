@@ -1,11 +1,12 @@
 extends Node2D
 
 export var food = 0
+export var food_production = 0
 export var industry = 0
 export var labor = 0
 export var population = 0
 export var solidarity = 75
-export var requierd_food = 200
+export var requierd_food = 60
 
 var turn = 1
 #initalization

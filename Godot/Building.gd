@@ -1,8 +1,8 @@
 extends Area2D
 
 #normal variables
-export var foodProduction = 0
-export var industryProduction = 50
+export var industryProduction = 5
+export var foodProduction = 10
 var underConstruction = false
 var state = 1
 var makeInto = 2
@@ -18,18 +18,18 @@ func _ready():
 #what to do when turn changes
 func nextTurn():
 	if active:
-		city.food = city.food + foodProduction
 		city.industry = city.industry + industryProduction
 		if underConstruction:
 			state = makeInto
 			if state == 1:
 				get_node("building/plant").visible = false
-				industryProduction = 50
+				city.food_production = city.food_production - foodProduction
+				industryProduction = 5
 				makeInto = 2
 			if state == 2:
 				get_node("building/plant").visible = true
-				foodProduction = 50
-				industryProduction = 50
+				city.food_production = city.food_production + foodProduction
+				industryProduction = 5
 				makeInto = 1
 			
 			$ReadySound.play()
@@ -49,7 +49,6 @@ func _on_Building_input_event(viewport, event, shape_idx):
 				#add more construction options here
 				city.industry = city.industry - 100
 				industryProduction = 0
-				foodProduction = 0
 				get_node("building/Construction").visible = true
 				underConstruction = true
 				$ConstructionSound.play()

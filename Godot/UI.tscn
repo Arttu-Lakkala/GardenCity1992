@@ -44,7 +44,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Happiness" type="Label" parent="."]
+[node name="Surplus" type="Label" parent="."]
 margin_left = 10.0
 margin_top = 80.0
 margin_right = 178.0

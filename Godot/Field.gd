@@ -5,7 +5,7 @@ extends Area2D
 export var YActivationSize = 200
 export var XActivationSize = 200
 export var labor = 1
-export var foodProduction = 100
+export var foodProduction = 50
 export var population = 50
 
 var active = false
@@ -16,8 +16,7 @@ func _ready():
 	city = get_parent()
 
 func nextTurn():
-	if active:
-		city.food = city.food + foodProduction
+	pass
 
 
 func _on_Field_input_event(viewport, event, shape_idx):
@@ -26,6 +25,7 @@ func _on_Field_input_event(viewport, event, shape_idx):
 			active = true
 			city.labor = city.labor + labor
 			city.population = city.population + population
+			city.food_production = city.food_production + foodProduction
 			get_node("field/field_plant").visible = true
 			var buildings = get_tree().get_nodes_in_group("Buildings")
 			for building in buildings:
