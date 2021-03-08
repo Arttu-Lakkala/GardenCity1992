@@ -4,9 +4,11 @@ export var food = 0
 export var industry = 0
 export var labor = 0
 export var solidarity = 75
-export var population = 0
+export var requierd_food = 200
+
 var turn = 1
 #initalization
+
 func _ready():
  pass
 
@@ -19,6 +21,12 @@ func nextTurn():
 		#if it is found we exectude that method
 		if child.has_method("nextTurn"):
 			child.nextTurn()
+	
+	if food < requierd_food:
+		solidarity = solidarity - (labor/10)
+		food = 0
+	else:
+		food = food - requierd_food
 	
 	
 

@@ -15,30 +15,42 @@ position = Vector2( 512.294, 301.354 )
 scale = Vector2( 4.8808, 5.55342 )
 texture = ExtResource( 1 )
 
-[node name="UI" parent="." instance=ExtResource( 4 )]
-margin_left = -1.69907
-margin_top = 0.561826
-margin_right = -1.69907
-margin_bottom = 0.561826
-
 [node name="Building2" parent="." groups=[
 "Buildings",
 ] instance=ExtResource( 5 )]
-position = Vector2( 241.87, 311.604 )
+position = Vector2( 689.87, 303.604 )
+
+[node name="Building5" parent="." groups=[
+"Buildings",
+] instance=ExtResource( 5 )]
+position = Vector2( 163.87, 293.604 )
+
+[node name="Building4" parent="." groups=[
+"Buildings",
+] instance=ExtResource( 5 )]
+position = Vector2( 365.87, 277.604 )
 
 [node name="Building3" parent="." groups=[
 "Buildings",
 ] instance=ExtResource( 5 )]
-position = Vector2( 877.844, 296.645 )
+position = Vector2( 873.844, 302.645 )
 
 [node name="Field" parent="." instance=ExtResource( 3 )]
-position = Vector2( 785.353, 338.654 )
+position = Vector2( 763.353, 342.654 )
 scale = Vector2( 0.25, 0.25 )
 
 [node name="Field2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 334.8, 394.525 )
+position = Vector2( 278.8, 319.525 )
 scale = Vector2( 0.25, 0.25 )
+
+[node name="UI" parent="." instance=ExtResource( 4 )]
+margin_left = 0.0
+margin_top = 1.0
+margin_right = 0.0
+margin_bottom = 1.0
 [connection signal="input_event" from="Building2" to="Building2" method="_on_Building_input_event"]
+[connection signal="input_event" from="Building5" to="Building5" method="_on_Building_input_event"]
+[connection signal="input_event" from="Building4" to="Building4" method="_on_Building_input_event"]
 [connection signal="input_event" from="Building3" to="Building3" method="_on_Building_input_event"]
 [connection signal="input_event" from="Field" to="Field" method="_on_Field_input_event"]
 [connection signal="input_event" from="Field2" to="Field2" method="_on_Field_input_event"]
