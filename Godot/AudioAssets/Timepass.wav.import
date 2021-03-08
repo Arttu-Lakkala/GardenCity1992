@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Timepass.wav-8e5cdf5dfa1574c6615481a109096fca.sample"
+
+[deps]
+
+source_file="res://AudioAssets/Timepass.wav"
+dest_files=[ "res://.import/Timepass.wav-8e5cdf5dfa1574c6615481a109096fca.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

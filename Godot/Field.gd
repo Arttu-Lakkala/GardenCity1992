@@ -4,8 +4,9 @@ extends Area2D
 # Exported variables(easy to change in editor) (Dont change in script)
 export var YActivationSize = 200
 export var XActivationSize = 200
-export var labor = 50
+export var labor = 1
 export var foodProduction = 100
+export var population = 50
 
 var active = false
 var city
@@ -24,6 +25,7 @@ func _on_Field_input_event(viewport, event, shape_idx):
 		if (event is InputEventMouseButton && event.pressed):
 			active = true
 			city.labor = city.labor + labor
+			city.population = city.population + population
 			get_node("field/field_plant").visible = true
 			var buildings = get_tree().get_nodes_in_group("Buildings")
 			for building in buildings:

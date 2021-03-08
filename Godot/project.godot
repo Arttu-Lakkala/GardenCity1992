@@ -19,6 +19,13 @@ config/name="GardenCity1992"
 run/main_scene="res://CityScene.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=2048
+window/size/height=1200
+window/size/resizable=false
+window/size/fullscreen=true
+
 [input]
 
 next_turn={

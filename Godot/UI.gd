@@ -16,4 +16,5 @@ func _process(delta):
 	$Food_Production.text = ("Food: "+ str(parent.food))
 	$Material_Production.text = ("Material: "+ str(parent.industry))
 	$Date_Count.text = (str(parent.turn))
-	$Population.text = ("Labor: " + str(parent.labor))
+	$Workers.text = ("Workers: " + str(parent.labor))
+	$Population.text = ("Population: " + str(parent.population))
