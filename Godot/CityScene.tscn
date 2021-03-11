@@ -42,10 +42,12 @@ position = Vector2( 873.844, 302.645 )
 [node name="Field" parent="." instance=ExtResource( 3 )]
 position = Vector2( 767.848, 335.162 )
 scale = Vector2( 0.25, 0.21 )
+z_index = -2
 
 [node name="Field2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 275.805, 309.527 )
 scale = Vector2( 0.25, 0.21 )
+z_index = -2
 
 [node name="UI" parent="." instance=ExtResource( 4 )]
 anchor_right = 0.0
@@ -59,6 +61,7 @@ stream = ExtResource( 6 )
 [node name="BackgroundBlocks" type="Node" parent="."]
 
 [node name="Building1" type="Node2D" parent="BackgroundBlocks"]
+z_index = -1
 
 [node name="Brick" type="Sprite" parent="BackgroundBlocks/Building1"]
 position = Vector2( 253.676, 268.516 )
@@ -128,6 +131,7 @@ texture = ExtResource( 7 )
 
 [node name="Building2" type="Node2D" parent="BackgroundBlocks"]
 position = Vector2( 210.462, -19.0819 )
+z_index = -1
 
 [node name="Brick" type="Sprite" parent="BackgroundBlocks/Building2"]
 position = Vector2( 253.676, 268.516 )
@@ -695,6 +699,7 @@ texture = ExtResource( 7 )
 
 [node name="Building3" type="Node2D" parent="BackgroundBlocks"]
 position = Vector2( 519.862, 9.38596 )
+z_index = -1
 
 [node name="Brick" type="Sprite" parent="BackgroundBlocks/Building3"]
 position = Vector2( 253.676, 268.516 )
@@ -764,6 +769,7 @@ texture = ExtResource( 7 )
 
 [node name="Building4" type="Node2D" parent="BackgroundBlocks"]
 position = Vector2( 706.401, 10.1351 )
+z_index = -1
 
 [node name="Brick" type="Sprite" parent="BackgroundBlocks/Building4"]
 position = Vector2( 253.676, 268.516 )
@@ -832,6 +838,7 @@ z_index = -2
 texture = ExtResource( 7 )
 
 [node name="StoneBlocks" type="Node2D" parent="BackgroundBlocks"]
+z_index = -1
 
 [node name="Sprite" type="Sprite" parent="BackgroundBlocks/StoneBlocks"]
 position = Vector2( 498.884, 266.693 )

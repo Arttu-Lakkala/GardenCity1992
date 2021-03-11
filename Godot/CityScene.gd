@@ -35,7 +35,7 @@ func nextTurn():
 	labor = population/10
 	
 	if solidarity <=0:
-		get_tree().reload_current_scene()
+		$UI.message("GAME OVER", "You lost the game")
 		
 	
 	
@@ -44,4 +44,6 @@ func nextTurn():
 #Normal process of the game this is where we check for key presses etc.
 func _process(delta):
 	if Input.is_action_just_pressed("next_turn"):
+		if solidarity <=0:
+			get_tree().reload_current_scene()
 		nextTurn()
