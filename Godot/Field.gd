@@ -23,7 +23,6 @@ func _on_Field_input_event(viewport, event, shape_idx):
 	if not active:
 		if (event is InputEventMouseButton && event.pressed):
 			active = true
-			city.labor = city.labor + labor
 			city.population = city.population + population
 			city.food_production = city.food_production + foodProduction
 			get_node("field/field_plant").visible = true

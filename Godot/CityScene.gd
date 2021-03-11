@@ -6,7 +6,6 @@ export var industry = 0
 export var labor = 0
 export var population = 0
 export var solidarity = 75
-export var requierd_food = 60
 
 var turn = 1
 #initalization
@@ -24,12 +23,18 @@ func nextTurn():
 		$TimePassSound.play()
 		if child.has_method("nextTurn"):
 			child.nextTurn()
-	
-	if food < requierd_food:
-		solidarity = solidarity - (population/10)
+	#add food
+	food = food + food_production
+	#if not enough food reduce solidarity
+	if food < population:
+		solidarity = solidarity - (population - food)
+		population = population - 5
 		food = 0
 	else:
-		food = food - requierd_food
+		food = food - population
+		population = population + population/20
+	
+	labor = population/10
 	
 	if solidarity <=0:
 		get_tree().reload_current_scene()

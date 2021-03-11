@@ -26,7 +26,7 @@ __meta__ = {
 
 [node name="Material_Production" type="Label" parent="."]
 margin_left = 10.0
-margin_top = 40.0
+margin_top = 100.0
 margin_right = 182.0
 margin_bottom = 54.0
 text = "Material Production: Total"
@@ -49,14 +49,14 @@ margin_left = 10.0
 margin_top = 80.0
 margin_right = 178.0
 margin_bottom = 94.0
-text = "Overall happiness: (0-100)"
+text = "Surplus"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Population" type="Label" parent="."]
 margin_left = 10.0
-margin_top = 100.0
+margin_top = 40.0
 margin_right = 117.0
 margin_bottom = 114.0
 text = "Total Population:"
@@ -72,7 +72,7 @@ margin_bottom = 134.0
 text = "Workers::"
 
 [node name="Turn_Button" type="Label" parent="."]
-margin_left = 1400.0
+margin_left = 1425.0
 margin_top = 800.0
 margin_right = 1494.0
 margin_bottom = 831.0
@@ -83,7 +83,7 @@ __meta__ = {
 }
 
 [node name="Date_Count" type="Label" parent="."]
-margin_left = 1400.0
+margin_left = 1450.0
 margin_top = 20.0
 margin_right = 1504.0
 margin_bottom = 34.0
