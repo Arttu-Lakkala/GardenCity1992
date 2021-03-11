@@ -19,3 +19,8 @@ func _process(delta):
 	$Date_Count.text = (str(parent.turn))
 	$Workers.text = ("Workers: " + str(parent.labor))
 	$Population.text = ("Population: " + str(parent.population))
+	
+
+func message(title, content):
+	$Message.set_popup(title, content)
+	$Message.popup_centered()
