@@ -47,3 +47,11 @@ func _process(delta):
 		if solidarity <=0:
 			get_tree().reload_current_scene()
 		nextTurn()
+
+func displayTooltip(Tilte, content):
+	$Tooltip.set_position(get_viewport().get_mouse_position())
+	$Tooltip.tooltipMessage(Tilte, content)
+	$Tooltip.visible = true
+
+func hideTooltip():
+	$Tooltip.visible = false

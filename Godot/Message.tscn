@@ -3,7 +3,6 @@
 [ext_resource path="res://Message.gd" type="Script" id=1]
 
 [node name="WindowDialog" type="WindowDialog"]
-visible = true
 margin_right = 1500.0
 margin_bottom = 750.0
 script = ExtResource( 1 )

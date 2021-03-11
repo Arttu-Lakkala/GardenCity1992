@@ -35,3 +35,12 @@ func _on_Field_input_event(viewport, event, shape_idx):
 				#check that building is located within activation area
 				if((self.position.y - YActivationSize < building.position.y && building.position.y < self.position.y + YActivationSize) && (self.position.x - XActivationSize < building.position.x && building.position.x < self.position.x + XActivationSize)):
 					building.activate()
+
+
+func _on_Field_mouse_entered():
+	if not active:
+		city.displayTooltip("Field", "Work to meet nearby people")
+
+
+func _on_Field_mouse_exited():
+	pass # Replace with function body.

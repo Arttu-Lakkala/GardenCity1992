@@ -53,3 +53,12 @@ func _on_Building_input_event(viewport, event, shape_idx):
 				underConstruction = true
 				$ConstructionSound.play()
 				state = 0
+
+
+func _on_Building5_mouse_entered():
+	if active && state ==1:
+		city.displayTooltip("Building", "Spend 100 material to get some food production")
+
+
+func _on_Building_mouse_exited():
+	city.hideTooltip()
