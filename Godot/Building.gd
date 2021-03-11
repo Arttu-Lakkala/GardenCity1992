@@ -1,7 +1,7 @@
 extends Area2D
 
 #normal variables
-export var industryProduction = 5
+export var industryProduction = 10
 export var foodProduction = 10
 var underConstruction = false
 var state = 1
@@ -39,7 +39,7 @@ func nextTurn():
 #happens when building gets activated
 func activate():
 	active = true
-	get_node("building/Construction").visible = true
+	$building.modulate = Color8(255,255,255)
 	
 #function for clicking on this object
 func _on_Building_input_event(viewport, event, shape_idx):

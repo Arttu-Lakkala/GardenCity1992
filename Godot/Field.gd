@@ -6,7 +6,9 @@ export var YActivationSize = 200
 export var XActivationSize = 200
 export var labor = 1
 export var foodProduction = 50
-export var population = 50
+export var startPopulation = 40
+export var populationIncrement = 2
+export var maxPopulation = 70
 
 var active = false
 var city
@@ -16,14 +18,16 @@ func _ready():
 	city = get_parent()
 
 func nextTurn():
-	pass
-
+	if active:
+		if startPopulation<maxPopulation:
+			startPopulation = startPopulation + populationIncrement
+			city.population = city.population + populationIncrement
 
 func _on_Field_input_event(viewport, event, shape_idx):
 	if not active:
 		if (event is InputEventMouseButton && event.pressed):
 			active = true
-			city.population = city.population + population
+			city.population = city.population + startPopulation
 			city.food_production = city.food_production + foodProduction
 			get_node("field/field_plant").visible = true
 			var buildings = get_tree().get_nodes_in_group("Buildings")

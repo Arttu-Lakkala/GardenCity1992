@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Building.gd" type="Script" id=1]
 [ext_resource path="res://AudioAssets/Shovel.wav" type="AudioStream" id=2]
-[ext_resource path="res://VisualAssets/Placeholder.bmp" type="Texture" id=3]
+[ext_resource path="res://VisualAssets/construction.png" type="Texture" id=3]
 [ext_resource path="res://VisualAssets/building.png" type="Texture" id=4]
 [ext_resource path="res://AudioAssets/Ready.wav" type="AudioStream" id=5]
 [ext_resource path="res://VisualAssets/building_plant.png" type="Texture" id=6]
@@ -23,6 +23,7 @@ stream = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="building" type="Sprite" parent="."]
+modulate = Color( 0.411765, 0.411765, 0.411765, 1 )
 position = Vector2( 81.8163, 10.0271 )
 scale = Vector2( 0.35434, 0.290311 )
 texture = ExtResource( 4 )
@@ -34,6 +35,6 @@ texture = ExtResource( 6 )
 
 [node name="Construction" type="Sprite" parent="building"]
 visible = false
-position = Vector2( -198.024, -312.102 )
-scale = Vector2( 1.93703, 2.88001 )
+position = Vector2( -214.011, -311.717 )
+scale = Vector2( 1.02761, 1.13574 )
 texture = ExtResource( 3 )

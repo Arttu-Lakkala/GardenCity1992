@@ -28,11 +28,9 @@ func nextTurn():
 	#if not enough food reduce solidarity
 	if food < population:
 		solidarity = solidarity - (population - food)
-		population = population - 5
 		food = 0
 	else:
 		food = food - population
-		population = population + population/20
 	
 	labor = population/10
 	
