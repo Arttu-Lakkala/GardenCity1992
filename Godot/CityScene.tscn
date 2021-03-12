@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://VisualAssets/ready blocks/abstract bg.jpg" type="Texture" id=1]
 [ext_resource path="res://CityScene.gd" type="Script" id=2]
@@ -9,14 +9,15 @@
 [ext_resource path="res://VisualAssets/ready blocks/Bricks 3.png" type="Texture" id=7]
 [ext_resource path="res://VisualAssets/ready blocks/Stone 4.png" type="Texture" id=8]
 [ext_resource path="res://Tooltip.tscn" type="PackedScene" id=9]
+[ext_resource path="res://AudioAssets/CityBackgroundMusic.wav" type="AudioStream" id=10]
 
 [node name="CityScene" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Placeholder" type="Sprite" parent="."]
 modulate = Color( 0.333333, 0.333333, 0.333333, 1 )
-position = Vector2( 802.13, 453.158 )
-scale = Vector2( 2.58748, 1.80894 )
+position = Vector2( 800.543, 446.808 )
+scale = Vector2( 2.59264, 1.83486 )
 z_index = -5
 texture = ExtResource( 1 )
 
@@ -65,6 +66,10 @@ margin_left = 501.077
 margin_top = 51.3807
 margin_right = 601.077
 margin_bottom = 151.381
+
+[node name="BackgroundAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -10.0
 
 [node name="BackgroundBlocks" type="Node" parent="."]
 
