@@ -11,7 +11,7 @@ var turn = 1
 #initalization
 
 func _ready():
- pass
+	$BackgroundAudio.play()
 
 
 #what happens when player passes turn

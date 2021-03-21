@@ -21,6 +21,11 @@ func _process(delta):
 	$Population.text = ("Population: " + str(parent.population))
 	
 
-func message(title, content):
-	$Message.set_popup(title, content)
-	$Message.popup_centered()
+func message(content):
+	$Message.set_popup(content)
+	$Message.visible = true
+	parent.messageVisable = true
+
+func closeMessage():
+	$Message.visible = false
+	parent.messageVisable = false
