@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Newspaper Font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://VisualAssets/Newspaper Assets/Newspaper Outline.png" type="Texture" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Newspaper Outline" type="Sprite" parent="."]
+position = Vector2( 1023.21, 747.229 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 670.515
+margin_top = 18.6569
+margin_right = 1366.51
+margin_bottom = 176.657
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "The New Post"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
