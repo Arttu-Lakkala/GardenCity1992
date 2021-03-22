@@ -3,7 +3,7 @@ extends Node2D
 export var food = 500
 export var food_production = 0
 export var industry = 0
-export var labor = 0
+export var labor = 5
 export var population = 0
 export var consumption = 50
 
@@ -22,6 +22,7 @@ func _ready():
 #what happens when player passes turn
 func nextTurn():
 	turn = turn + 1
+	labor = labor + 1
 	if turn == 5:
 		UI.message("Turn 5")
 	for child in get_children():
