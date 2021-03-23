@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Newspaper Font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://VisualAssets/Newspaper Assets/Newspaper Outline.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/PlayfairDisplay-VariableFont_wght.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Newspaper Headline Font.tres" type="DynamicFont" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 22
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 13
+font_data = ExtResource( 3 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Newspaper Outline" type="Sprite" parent="."]
+position = Vector2( 1023.21, 745.814 )
+texture = ExtResource( 2 )
+
+[node name="Newspaper Title" type="Label" parent="."]
+margin_left = 670.515
+margin_top = 18.6569
+margin_right = 1366.51
+margin_bottom = 176.657
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "The New Post"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Headline" type="Label" parent="."]
+margin_left = 485.13
+margin_top = 193.071
+margin_right = 1586.13
+margin_bottom = 328.071
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Government declares state of emergency"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Subheading" type="Label" parent="."]
+margin_left = 494.0
+margin_top = 319.0
+margin_right = 733.0
+margin_bottom = 390.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Anticapitalist protesters
+found \"commune\""
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Author" type="Label" parent="."]
+margin_left = 518.0
+margin_top = 398.0
+margin_right = 753.0
+margin_bottom = 426.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Reporting by Allibaster Califax"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="First Column" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}

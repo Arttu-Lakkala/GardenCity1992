@@ -26,20 +26,22 @@ func nextTurn():
 func _on_Field_input_event(viewport, event, shape_idx):
 	if not active:
 		if (event is InputEventMouseButton && event.pressed):
-			active = true
-			city.population = city.population + startPopulation
-			city.food_production = city.food_production + foodProduction
-			get_node("field/field_plant").visible = true
-			var buildings = get_tree().get_nodes_in_group("Buildings")
-			for building in buildings:
-				#check that building is located within activation area
-				if((self.position.y - YActivationSize < building.position.y && building.position.y < self.position.y + YActivationSize) && (self.position.x - XActivationSize < building.position.x && building.position.x < self.position.x + XActivationSize)):
-					building.activate()
+			if city.labor >= 5:
+				city.labor = city.labor - 5
+				active = true
+				city.population = city.population + startPopulation
+				city.food_production = city.food_production + foodProduction
+				get_node("field/field_plant").visible = true
+				var buildings = get_tree().get_nodes_in_group("Buildings")
+				for building in buildings:
+					#check that building is located within activation area
+					if((self.position.y - YActivationSize < building.position.y && building.position.y < self.position.y + YActivationSize) && (self.position.x - XActivationSize < building.position.x && building.position.x < self.position.x + XActivationSize)):
+						building.activate()
 
 
 func _on_Field_mouse_entered():
 	if not active:
-		city.displayTooltip("Field", "Work to meet nearby people")
+		city.displayTooltip("Field", "Work (5 labor) to meet nearby people")
 
 
 func _on_Field_mouse_exited():
