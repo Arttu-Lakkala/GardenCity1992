@@ -1,10 +1,18 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://VisualAssets/browser.png" type="Texture" id=1]
+[ext_resource path="res://Message.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.396078, 0.117647, 0.117647, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.984314, 0.94902, 0.94902, 1 )
 
 [node name="Control" type="Control"]
 margin_right = 40.0
 margin_bottom = 40.0
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -26,3 +34,28 @@ margin_bottom = -3.68005
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Button" type="Button" parent="."]
+modulate = Color( 0.917647, 0.0156863, 0.0156863, 1 )
+self_modulate = Color( 0.956863, 0.921569, 0.921569, 1 )
+anchor_left = 29.311
+anchor_top = 7.127
+anchor_right = 30.647
+anchor_bottom = 7.929
+margin_left = -10.4401
+margin_top = -0.0800171
+margin_right = 1.12
+margin_bottom = -2.16
+focus_mode = 1
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_colors/font_color_disabled = Color( 0.0627451, 0.0313726, 0.0313726, 1 )
+custom_colors/font_color = Color( 0.152941, 0.105882, 0.105882, 1 )
+custom_colors/font_color_hover = Color( 0.0196078, 0.0117647, 0.0117647, 1 )
+custom_colors/font_color_pressed = Color( 0.0392157, 0.0313726, 0.0313726, 1 )
+enabled_focus_mode = 1
+text = "X"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
