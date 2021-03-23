@@ -72,6 +72,11 @@ position = Vector2( 767.848, 335.162 )
 scale = Vector2( 0.25, 0.21 )
 z_index = -2
 
+[node name="Field3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 428.82, 877.606 )
+scale = Vector2( 0.25, 0.21 )
+z_index = -2
+
 [node name="Field2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 275.805, 309.527 )
 scale = Vector2( 0.25, 0.21 )
@@ -4516,6 +4521,9 @@ tile_data = PoolIntArray( -327668, 0, 0, -327667, 0, 0, -327666, 0, 0, -327665, 
 [connection signal="input_event" from="Field" to="Field" method="_on_Field_input_event"]
 [connection signal="mouse_entered" from="Field" to="Field" method="_on_Field_mouse_entered"]
 [connection signal="mouse_exited" from="Field" to="Field" method="_on_Field_mouse_exited"]
+[connection signal="input_event" from="Field3" to="Field3" method="_on_Field_input_event"]
+[connection signal="mouse_entered" from="Field3" to="Field3" method="_on_Field_mouse_entered"]
+[connection signal="mouse_exited" from="Field3" to="Field3" method="_on_Field_mouse_exited"]
 [connection signal="input_event" from="Field2" to="Field2" method="_on_Field_input_event"]
 [connection signal="mouse_entered" from="Field2" to="Field2" method="_on_Field_mouse_entered"]
 [connection signal="mouse_exited" from="Field2" to="Field2" method="_on_Field_mouse_exited"]
