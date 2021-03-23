@@ -50,12 +50,6 @@ scale = Vector2( 3.036, 2.844 )
 position = Vector2( 1040.2, 1120.26 )
 scale = Vector2( 3.036, 2.844 )
 
-[node name="Building10" parent="." groups=[
-"Buildings",
-] instance=ExtResource( 5 )]
-position = Vector2( 2887.17, 2294.06 )
-scale = Vector2( 3.036, 2.844 )
-
 [node name="Building11" parent="." groups=[
 "Buildings",
 ] instance=ExtResource( 5 )]
@@ -142,9 +136,6 @@ tile_data = PoolIntArray( -1048570, 0, 0, -1048569, 0, 0, -1048568, 0, 0, -10485
 [connection signal="input_event" from="Building9" to="Building9" method="_on_Building_input_event"]
 [connection signal="mouse_entered" from="Building9" to="Building9" method="_on_Building5_mouse_entered"]
 [connection signal="mouse_exited" from="Building9" to="Building9" method="_on_Building_mouse_exited"]
-[connection signal="input_event" from="Building10" to="Building10" method="_on_Building_input_event"]
-[connection signal="mouse_entered" from="Building10" to="Building10" method="_on_Building5_mouse_entered"]
-[connection signal="mouse_exited" from="Building10" to="Building10" method="_on_Building_mouse_exited"]
 [connection signal="input_event" from="Building11" to="Building11" method="_on_Building_input_event"]
 [connection signal="mouse_entered" from="Building11" to="Building11" method="_on_Building5_mouse_entered"]
 [connection signal="mouse_exited" from="Building11" to="Building11" method="_on_Building_mouse_exited"]
