@@ -29,7 +29,7 @@ func nextTurn():
 	turn = turn + 1
 	labor = labor + 1
 	if turn == 5:
-		UI.message(1, "Turn 5")
+		UI.message(1, 1)
 	for child in get_children():
 		#checks all children for a method named nextTurn
 		#if it is found we exectude that method
@@ -42,7 +42,7 @@ func nextTurn():
 	#if not enough food reduce solidarity
 	
 	if food <0:
-		UI.message(2, "Sorry dear you lost")
+		UI.message(2, 2)
 		
 	
 	
