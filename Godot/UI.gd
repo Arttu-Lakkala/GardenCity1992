@@ -30,17 +30,26 @@ func _process(delta):
 			$TurnPass.stop()
 			TimePassingTimer = 0.0
 			TimePassingTimer = false
-			$Dimmer.visible = false
+			if not parent.messageVisable:
+				$Dimmer.visible = false
 	
 
-func message(content):
-	$Message.set_popup(content)
+func message(content, type):
+	#set message
+	$Message.set_popup(content, type)
+	#make it visable
 	$Message.visible = true
+	$Dimmer.visible = true
+	#notify main scene
 	parent.messageVisable = true
 
 func closeMessage():
+	#close message
 	$Message.visible = false
+	$Dimmer.visible = false
+	#notify main scene
 	parent.messageVisable = false
+
 
 func nextTurn():
 	get_node("TurnPass/Sun").visible = true

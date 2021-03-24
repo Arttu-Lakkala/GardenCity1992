@@ -8,8 +8,10 @@ export var population = 0
 export var consumption = 50
 
 
+
 var turn = 1
 var messageVisable = false
+var timePassingTimer = 0
 
 onready var UI = get_node("UnZoomCamera/UI")
 #initalization
@@ -21,10 +23,13 @@ func _ready():
 
 #what happens when player passes turn
 func nextTurn():
+	
+	timePassingTimer = 2.0
+	
 	turn = turn + 1
 	labor = labor + 1
 	if turn == 5:
-		UI.message("Turn 5")
+		UI.message(1, "Turn 5")
 	for child in get_children():
 		#checks all children for a method named nextTurn
 		#if it is found we exectude that method
@@ -37,7 +42,7 @@ func nextTurn():
 	#if not enough food reduce solidarity
 	
 	if food <0:
-		UI.message("GAME OVER")
+		UI.message(2, "Sorry dear you lost")
 		
 	
 	
@@ -45,17 +50,20 @@ func nextTurn():
 
 #Normal process of the game this is where we check for key presses etc.
 func _process(delta):
-	if not messageVisable:
+	if timePassingTimer > 0:
+		
+		timePassingTimer -= delta
+		
+		if timePassingTimer < 0:
+			timePassingTimer = 0
+			
+	if not messageVisable && timePassingTimer == 0:
 		if Input.is_action_just_pressed("next_turn"):
 			if food <0:
 				get_tree().reload_current_scene()
 			nextTurn()
-	else:
-		if Input.is_action_just_pressed("close_message"):
-			UI.closeMessage()
 
 func displayTooltip(Tilte, content):
-	$Tooltip.set_position(get_viewport().get_mouse_position())
 	$Tooltip.tooltipMessage(Tilte, content)
 	$Tooltip.visible = true
 
