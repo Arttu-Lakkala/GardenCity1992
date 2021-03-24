@@ -73,6 +73,7 @@ scale = Vector2( 3, 3 )
 ] instance=ExtResource( 5 )]
 position = Vector2( 1096.73, 171.086 )
 scale = Vector2( 3, 3 )
+grandmasHouse = true
 
 [node name="Building6" parent="." groups=[
 "Buildings",
@@ -103,10 +104,10 @@ stream = ExtResource( 6 )
 
 [node name="Tooltip" parent="." instance=ExtResource( 9 )]
 visible = false
-margin_left = 501.077
-margin_top = 51.3807
-margin_right = 801.077
-margin_bottom = 351.381
+margin_left = 2209.45
+margin_top = -338.942
+margin_right = 2959.45
+margin_bottom = 411.058
 
 [node name="BackgroundAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )

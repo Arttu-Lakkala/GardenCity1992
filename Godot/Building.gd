@@ -3,6 +3,7 @@ extends Area2D
 #normal variables
 export var industryProduction = 10
 export var foodProduction = 10
+export var grandmasHouse = false
 var underConstruction = false
 var state = 1
 var makeInto = 2
@@ -24,12 +25,13 @@ func nextTurn():
 			if state == 1:
 				get_node("building/plant").visible = false
 				city.food_production = city.food_production - foodProduction
-				industryProduction = 5
+				industryProduction = 0
 				makeInto = 2
 			if state == 2:
 				get_node("building/plant").visible = true
 				city.food_production = city.food_production + foodProduction
-				industryProduction = 5
+				city.labor = city.labor + 1
+				industryProduction = 0
 				makeInto = 1
 			
 			$ReadySound.play()
@@ -38,14 +40,16 @@ func nextTurn():
 
 #happens when building gets activated
 func activate():
+	if grandmasHouse:
+		city.UI.message(2,4)
 	active = true
 	$building.modulate = Color8(255,255,255)
 	
 #function for clicking on this object
 func _on_Building_input_event(viewport, event, shape_idx):
-	if active:
+	if active && state == 1:
 		if (event is InputEventMouseButton && event.pressed):
-			if (city.industry >= 100 && not underConstruction):
+			if (city.industry >= 20 && not underConstruction):
 				#add more construction options here
 				city.industry = city.industry - 100
 				industryProduction = 0
@@ -57,7 +61,7 @@ func _on_Building_input_event(viewport, event, shape_idx):
 
 func _on_Building5_mouse_entered():
 	if active && state ==1:
-		city.displayTooltip("Building", "Spend 100 material to get some food production")
+		city.displayTooltip("Building", "Spend 20 material to get some food production")
 
 
 func _on_Building_mouse_exited():
