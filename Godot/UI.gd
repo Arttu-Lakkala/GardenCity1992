@@ -4,6 +4,7 @@ extends Control
 # Declare member variables here. Examples:
 # var a = 2
 var parent
+var TimePassingTimer = 0.0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -20,6 +21,17 @@ func _process(delta):
 	$Workers.text = ("Workers: " + str(parent.labor))
 	$Population.text = ("Support " + str(parent.population))
 	
+	if(TimePassingTimer):
+		
+		TimePassingTimer -= delta
+		
+		if TimePassingTimer < 0:
+			get_node("TurnPass/Sun").visible = false
+			$TurnPass.stop()
+			TimePassingTimer = 0.0
+			TimePassingTimer = false
+			$Dimmer.visible = false
+	
 
 func message(content):
 	$Message.set_popup(content)
@@ -29,3 +41,9 @@ func message(content):
 func closeMessage():
 	$Message.visible = false
 	parent.messageVisable = false
+
+func nextTurn():
+	get_node("TurnPass/Sun").visible = true
+	$TurnPass.play("TurnPass")
+	$Dimmer.visible = true
+	TimePassingTimer = 2.0

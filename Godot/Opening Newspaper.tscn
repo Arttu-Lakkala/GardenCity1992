@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Newspaper Font.tres" type="DynamicFont" id=1]
-[ext_resource path="res://VisualAssets/Newspaper Assets/Newspaper Outline.png" type="Texture" id=2]
 [ext_resource path="res://Fonts/PlayfairDisplay-VariableFont_wght.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Newspaper Headline Font.tres" type="DynamicFont" id=4]
 
@@ -17,7 +16,6 @@ font_data = ExtResource( 3 )
 
 [node name="Newspaper Outline" type="Sprite" parent="."]
 position = Vector2( 1023.21, 745.814 )
-texture = ExtResource( 2 )
 
 [node name="Newspaper Title" type="Label" parent="."]
 margin_left = 670.515

@@ -28,6 +28,7 @@ func nextTurn():
 	for child in get_children():
 		#checks all children for a method named nextTurn
 		#if it is found we exectude that method
+		UI.nextTurn()
 		$TimePassSound.play()
 		if child.has_method("nextTurn"):
 			child.nextTurn()

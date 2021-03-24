@@ -1,8 +1,25 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://UI.gd" type="Script" id=1]
 [ext_resource path="res://Message.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Message.gd" type="Script" id=3]
+[ext_resource path="res://VisualAssets/Sun.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "TurnPass"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -450, 1500 ), Vector2( 1200, 150 ), Vector2( 2750, 1500 ) ]
+}
 
 [node name="UI" type="Control"]
 anchor_right = 1.0
@@ -101,4 +118,24 @@ margin_left = -114.203
 margin_top = -192.634
 margin_right = -74.2031
 margin_bottom = -152.634
-script = ExtResource( 3 )
+
+[node name="TurnPass" type="AnimationPlayer" parent="."]
+root_node = NodePath("Sun")
+anims/TurnPass = SubResource( 1 )
+
+[node name="Sun" type="Sprite" parent="TurnPass"]
+visible = false
+position = Vector2( -100, 1500 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Dimmer" type="ColorRect" parent="."]
+visible = false
+modulate = Color( 0, 0, 0, 0.580392 )
+margin_left = -169.0
+margin_top = -124.0
+margin_right = 1726.0
+margin_bottom = 963.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
