@@ -3,6 +3,7 @@ extends Area2D
 #normal variables
 export var industryProduction = 10
 export var foodProduction = 10
+export var grandmasHouse = false
 var underConstruction = false
 var state = 1
 var makeInto = 2
@@ -39,6 +40,8 @@ func nextTurn():
 
 #happens when building gets activated
 func activate():
+	if grandmasHouse:
+		city.UI.message(2,4)
 	active = true
 	$building.modulate = Color8(255,255,255)
 	

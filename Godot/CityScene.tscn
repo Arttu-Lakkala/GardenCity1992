@@ -73,6 +73,7 @@ scale = Vector2( 3, 3 )
 ] instance=ExtResource( 5 )]
 position = Vector2( 1096.73, 171.086 )
 scale = Vector2( 3, 3 )
+grandmasHouse = true
 
 [node name="Building6" parent="." groups=[
 "Buildings",

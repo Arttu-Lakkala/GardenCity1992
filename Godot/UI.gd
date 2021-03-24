@@ -29,7 +29,6 @@ func _process(delta):
 			get_node("TurnPass/Sun").visible = false
 			$TurnPass.stop()
 			TimePassingTimer = 0.0
-			TimePassingTimer = false
 			if not parent.messageVisable:
 				$Dimmer.visible = false
 	

@@ -28,8 +28,6 @@ func nextTurn():
 	
 	turn = turn + 1
 	labor = labor + 1
-	if turn == 5:
-		UI.message(1, 1)
 	for child in get_children():
 		#checks all children for a method named nextTurn
 		#if it is found we exectude that method
@@ -40,7 +38,10 @@ func nextTurn():
 	#add food
 	food = food + food_production - consumption
 	#if not enough food reduce solidarity
-	
+	#messages
+	if turn == 5:
+		UI.message(1, 1)
+		
 	if food <0:
 		UI.message(2, 2)
 		

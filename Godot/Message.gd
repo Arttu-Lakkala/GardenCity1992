@@ -4,6 +4,7 @@ onready var filePath = 'res://Messages.txt'
 var parent 
 var content
 var sender
+var player
 
 func _ready():
 	parent = get_parent()
@@ -14,14 +15,20 @@ func set_popup(messageType, content_text_number, sender = "Office"):
 	$browser.visible = false
 	$grandma.visible = false
 	if messageType == 1:
+		player = $MessageAudio
 		content = get_node("browser/BrowserContent")
 		$browser.visible = true
 	elif messageType == 2:
+		player = $SpeachAudio
 		content = get_node("grandma/GrandmaContent")
 		$grandma.visible = true
 	else: pass
 	#set correct message text
 	content.text = load_from_file(content_text_number, filePath)
+	
+	#if turn isn't passing play sound
+	if parent.TimePassingTimer == 0:
+		player.play()
 
 
 func _on_Button_pressed():
