@@ -137,5 +137,4 @@ anims/TurnPass = SubResource( 1 )
 [node name="Sun" type="Sprite" parent="TurnPass"]
 visible = false
 position = Vector2( -100, 1500 )
-scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
