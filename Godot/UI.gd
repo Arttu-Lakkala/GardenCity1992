@@ -13,10 +13,9 @@ func _ready():
 
 #what happens when player passes turn
 func _process(delta):
-	$Solidarity.text = ("Solidarity (UNUSED)")
 	$Surplus.text = ("Food surplus: "+ str(parent.food))
 	$Food_Production.text = ("Food loss: "+ str(parent.food_production - parent.consumption))
-	$Material_Production.text = ("Material: "+ str(parent.industry))
+	$Material_Production.text = ("Solidarity: "+ str(parent.industry))
 	$Date_Count.text = (str(parent.turn))
 	$Workers.text = ("Workers: " + str(parent.labor))
 	$Population.text = ("Support " + str(parent.population))

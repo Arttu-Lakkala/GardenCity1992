@@ -53,16 +53,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Solidarity" type="Label" parent="."]
-margin_left = 10.0
-margin_top = 60.0
-margin_right = 751.0
-margin_bottom = 74.0
-text = "Solidarity: (0-100)"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Surplus" type="Label" parent="."]
 margin_left = 10.0
 margin_top = 80.0
@@ -85,10 +75,13 @@ __meta__ = {
 
 [node name="Workers" type="Label" parent="."]
 margin_left = 10.0
-margin_top = 120.0
+margin_top = 60.0
 margin_right = 71.0
-margin_bottom = 134.0
+margin_bottom = 74.0
 text = "Workers::"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Turn_Button" type="Label" parent="."]
 margin_left = 1425.0

@@ -25,13 +25,11 @@ func nextTurn():
 			if state == 1:
 				get_node("building/plant").visible = false
 				city.food_production = city.food_production - foodProduction
-				industryProduction = 0
 				makeInto = 2
 			if state == 2:
 				get_node("building/plant").visible = true
 				city.food_production = city.food_production + foodProduction
 				city.labor = city.labor + 1
-				industryProduction = 0
 				makeInto = 1
 			
 			$ReadySound.play()
