@@ -4,6 +4,7 @@ extends Area2D
 export var industryProduction = 10
 export var foodProduction = 25
 export var grandmasHouse = false
+export var coolHouse = false
 var underConstruction = false
 var state = 1
 var makeInto = 2
@@ -45,6 +46,8 @@ func activate():
 	#send assosiated message
 	if grandmasHouse:
 		city.UI.message(2,4)
+	elif coolHouse:
+		pass
 	else:
 		if city.fieldsActivated ==0:
 			city.UI.message(1,5)
@@ -72,6 +75,8 @@ func _on_Building_input_event(viewport, event, shape_idx):
 					#send assosiated message
 				if grandmasHouse:
 					city.UI.message(2,10)
+				elif coolHouse:
+					pass
 				else:
 					if city.buildingsActivated ==0:
 						city.UI.message(1,11)

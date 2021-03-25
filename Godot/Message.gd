@@ -15,6 +15,7 @@ func set_popup(messageType, content_text_number, sender = "Message from the Citi
 	#visualize correct message form
 	$browser.visible = false
 	$grandma.visible = false
+	$resident2.visible = false
 	if messageType == 1:
 		player = $MessageAudio
 		content = get_node("browser/BrowserContent")
@@ -24,6 +25,10 @@ func set_popup(messageType, content_text_number, sender = "Message from the Citi
 		player = $SpeachAudio
 		content = get_node("grandma/GrandmaContent")
 		$grandma.visible = true
+	elif messageType == 3:
+		player = $SpeachAudio
+		content = get_node("resident2/ResidentContent")
+		$resident2.visible = true
 	else: pass
 	#set correct message text
 	content.text = load_from_file(content_text_number, filePath)
