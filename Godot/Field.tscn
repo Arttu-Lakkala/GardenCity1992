@@ -7,7 +7,12 @@
 [node name="Field" type="Area2D"]
 script = ExtResource( 2 )
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -35.2778, 299.861 )
+polygon = PoolVector2Array( -0.00256348, -1.44666, 542.156, -316.779, 90.7781, -575.894, -450.526, -264.763 )
+
 [node name="field" type="Sprite" parent="."]
+self_modulate = Color( 0.137255, 1, 0.0156863, 1 )
 position = Vector2( -55.6334, -155.096 )
 texture = ExtResource( 1 )
 
@@ -15,7 +20,3 @@ texture = ExtResource( 1 )
 visible = false
 position = Vector2( 5.21552, -4.60785 )
 texture = ExtResource( 3 )
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2( -35.2778, 299.861 )
-polygon = PoolVector2Array( -0.00256348, -1.44666, 542.156, -316.779, 90.7781, -575.894, -450.526, -264.763 )
