@@ -8,7 +8,8 @@ export var population = 0
 export var consumption = 200
 
 
-
+var buildingsActivated = 0
+var fieldsActivated = 0
 var turn = 1
 var messageVisable = false
 var timePassingTimer = 0
