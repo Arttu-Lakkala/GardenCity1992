@@ -2,7 +2,8 @@ extends Area2D
 
 
 # Exported variables(easy to change in editor) (Dont change in script)
-export var YActivationSize = 200
+export var YActivationSizeUp = 200
+export var YActivationSizeDown = 200
 export var XActivationSize = 200
 export var labor = 1
 export var foodProduction = 50
@@ -36,7 +37,7 @@ func _on_Field_input_event(viewport, event, shape_idx):
 				var buildings = get_tree().get_nodes_in_group("Buildings")
 				for building in buildings:
 					#check that building is located within activation area
-					if((self.position.y - YActivationSize < building.position.y && building.position.y < self.position.y + YActivationSize) && (self.position.x - XActivationSize < building.position.x && building.position.x < self.position.x + XActivationSize)):
+					if((self.position.y - YActivationSizeUp < building.position.y && building.position.y < self.position.y + YActivationSizeDown) && (self.position.x - XActivationSize < building.position.x && building.position.x < self.position.x + XActivationSize)):
 						building.activate()
 
 

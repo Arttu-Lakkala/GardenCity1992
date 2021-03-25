@@ -1,11 +1,11 @@
 extends Node2D
 
-export var food = 500
+export var food = 4000
 export var food_production = 0
 export var industry = 0
 export var labor = 5
 export var population = 0
-export var consumption = 50
+export var consumption = 200
 
 
 
@@ -52,6 +52,8 @@ func _process(delta):
 		if Input.is_action_just_pressed("next_turn"):
 			if food <=0:
 				get_tree().change_scene("res://Lose_Scene.tscn")
+			if food_production > consumption:
+				get_tree().change_scene("res://Win_Scene.tscn")
 			nextTurn()
 
 func displayTooltip(Tilte, content):

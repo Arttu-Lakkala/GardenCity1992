@@ -2,7 +2,7 @@ extends Area2D
 
 #normal variables
 export var industryProduction = 10
-export var foodProduction = 10
+export var foodProduction = 25
 export var grandmasHouse = false
 var underConstruction = false
 var state = 1
