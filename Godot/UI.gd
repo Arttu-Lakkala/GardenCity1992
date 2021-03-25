@@ -32,9 +32,9 @@ func _process(delta):
 				$Dimmer.visible = false
 	
 
-func message(content, type):
+func message(content, type, sender = "Message from the Citizen's Council:"):
 	#set message
-	$Message.set_popup(content, type)
+	$Message.set_popup(content, type, sender)
 	#make it visable
 	$Message.visible = true
 	$Dimmer.visible = true

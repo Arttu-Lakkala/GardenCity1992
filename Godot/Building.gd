@@ -47,7 +47,7 @@ func activate():
 	if grandmasHouse:
 		city.UI.message(2,4)
 	elif coolHouse:
-		pass
+		city.UI.message(3,8)
 	else:
 		if city.fieldsActivated ==0:
 			city.UI.message(1,5)
@@ -76,7 +76,7 @@ func _on_Building_input_event(viewport, event, shape_idx):
 				if grandmasHouse:
 					city.UI.message(2,10)
 				elif coolHouse:
-					pass
+					city.UI.message(1,14, "Message From W.B:")
 				else:
 					if city.buildingsActivated ==0:
 						city.UI.message(1,11)
