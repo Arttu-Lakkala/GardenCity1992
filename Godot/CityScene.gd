@@ -11,7 +11,7 @@ export var consumption = 200
 var buildingsActivated = 0
 var fieldsActivated = 0
 var turn = 1
-var messageVisable = false
+var messageVisable = true
 var timePassingTimer = 0
 
 onready var UI = get_node("UnZoomCamera/UI")

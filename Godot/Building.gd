@@ -42,7 +42,7 @@ func activate():
 	active = true
 	$building.modulate = Color8(255,255,255)
 	
-	#sen assosiated message
+	#send assosiated message
 	if grandmasHouse:
 		city.UI.message(2,4)
 	else:
@@ -52,20 +52,37 @@ func activate():
 			city.UI.message(1,6)
 		elif city.fieldsActivated ==2:
 			city.UI.message(1,7)
+		#count activated fields
 		city.fieldsActivated = city.fieldsActivated +1
 	
 	
 #function for clicking on this object
 func _on_Building_input_event(viewport, event, shape_idx):
+	
 	if active && state == 1:
 		if (event is InputEventMouseButton && event.pressed):
 			if (city.industry >= 20 && not underConstruction):
-				#add more construction options here
+				#activate building
 				city.industry = city.industry - 20
 				get_node("building/Construction").visible = true
 				underConstruction = true
 				$ConstructionSound.play()
 				state = 0
+				
+					#send assosiated message
+				if grandmasHouse:
+					city.UI.message(2,10)
+				else:
+					if city.buildingsActivated ==0:
+						city.UI.message(1,11)
+					elif city.buildingsActivated ==1:
+						city.UI.message(1,12)
+					elif city.buildingsActivated ==2:
+						city.UI.message(1,13)
+					#count activated buildings
+					city.buildingsActivated = city.buildingsActivated +1
+	
+
 
 
 #func _on_Building5_mouse_entered():

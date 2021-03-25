@@ -25,7 +25,6 @@ __meta__ = {
 }
 
 [node name="browser" type="Sprite" parent="."]
-visible = false
 position = Vector2( 883.007, 574.522 )
 scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 1 )
@@ -36,12 +35,21 @@ anchor_top = 11.092
 anchor_right = 30.007
 anchor_bottom = 22.842
 margin_left = -14675.5
-margin_top = -9450.4
+margin_top = -9450.19
 margin_right = -37960.9
-margin_bottom = -18829.7
+margin_bottom = -18801.4
 custom_fonts/font = ExtResource( 8 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Raised beds on roofs and windows can provide vital supplements to our food production. That they also make the city look pretty is an added bonus!"
+text = "Comrade! Errr, there is a spectre haunting your messaging system… Anyway, you must feed the revolution by turning the city into an urban garden.
+
+Click on fields to grow food. But be warned! Fields need labour power!
+
+Click on buildings to activate them. Remember though! Buildings can only be activated with enough solidarity! But don’t worry that will grow along with your gardens.
+
+Close the messages with C or by clicking the X
+
+When you are ready to seize the reins of history, press space bar to end the turn.
+"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -58,7 +66,7 @@ margin_right = -37959.7
 margin_bottom = -19322.7
 custom_fonts/font = ExtResource( 9 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Message from the Citizen's Council:"
+text = "Message from the ghost of Karl Marx:"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
