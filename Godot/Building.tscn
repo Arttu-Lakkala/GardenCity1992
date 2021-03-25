@@ -22,18 +22,19 @@ stream = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="Building1" type="Sprite" parent="."]
+[node name="building" type="Sprite" parent="."]
+modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
 position = Vector2( 57.4354, -81.4692 )
 scale = Vector2( 0.35, 0.29 )
 texture = ExtResource( 4 )
 
-[node name="Construction" type="Sprite" parent="Building1"]
+[node name="Construction" type="Sprite" parent="building"]
 visible = false
 position = Vector2( -147.005, 3.45322 )
 scale = Vector2( 1.04035, 1.13696 )
 texture = ExtResource( 3 )
 
-[node name="plant" type="Sprite" parent="Building1"]
+[node name="plant" type="Sprite" parent="building"]
 visible = false
 position = Vector2( 71.6804, 308.189 )
 scale = Vector2( 1.0124, 1.00107 )

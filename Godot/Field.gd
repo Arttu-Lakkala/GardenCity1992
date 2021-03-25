@@ -41,10 +41,10 @@ func _on_Field_input_event(viewport, event, shape_idx):
 						building.activate()
 
 
-func _on_Field_mouse_entered():
-	if not active:
-		city.displayTooltip("Field", "Work (5 labor) to meet nearby people")
+#func _on_Field_mouse_entered():
+	#if not active:
+		#city.displayTooltip("Field", "Work (5 labor) to meet nearby people")
 
 
-func _on_Field_mouse_exited():
-	pass # Replace with function body.
+#func _on_Field_mouse_exited():
+	#pass # Replace with function body.

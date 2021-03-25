@@ -56,9 +56,9 @@ func _process(delta):
 				get_tree().change_scene("res://Win_Scene.tscn")
 			nextTurn()
 
-func displayTooltip(Tilte, content):
-	$Tooltip.tooltipMessage(Tilte, content)
-	$Tooltip.visible = true
+#func displayTooltip(Tilte, content):
+	#$Tooltip.tooltipMessage(Tilte, content)
+	#$Tooltip.visible = true
 
-func hideTooltip():
-	$Tooltip.visible = false
+#func hideTooltip():
+	#$Tooltip.visible = false
