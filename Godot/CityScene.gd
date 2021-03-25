@@ -5,9 +5,9 @@ export var food_production = 0
 export var industry = 0
 export var labor = 5
 export var population = 0
-export var consumption = 200
+export var consumption = 300
 
-
+var warnings = 0
 var buildingsActivated = 0
 var fieldsActivated = 0
 var turn = 1
@@ -36,8 +36,21 @@ func nextTurn():
 		$TimePassSound.play()
 		if child.has_method("nextTurn"):
 			child.nextTurn()
-	#add food
+	#reduce food
 	food = food + food_production - consumption
+	
+	#warning messages
+	if(food_production<101 && food<2500 && warnings<1):
+		UI.message(1, 17)
+		warnings=1
+	if(food_production<150 && food<1500 && warnings<2):
+		UI.message(1, 18)
+		warnings=2
+	if(food_production<200 && food<1500 && warnings<3):
+		UI.message(1, 19)
+		warnings=3
+	if(food<=consumption):
+		UI.message(1, 20)
 	
 
 #Normal process of the game this is where we check for key presses etc.
