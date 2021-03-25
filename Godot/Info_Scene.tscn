@@ -4,24 +4,24 @@
 [ext_resource path="res://Info_Scene.gd" type="Script" id=3]
 
 [node name="Control" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = -246.0
-margin_bottom = -271.0
+anchor_right = 0.88
+anchor_bottom = 0.86
+margin_right = -0.240112
+margin_bottom = -103.0
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1796.0
-margin_bottom = 1200.0
+margin_right = 2246.0
+margin_bottom = 1513.0
 color = Color( 0.0470588, 0.00784314, 0.00784314, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Introductory Newspaper Cropped" type="Sprite" parent="."]
-position = Vector2( 786.084, 514.776 )
-scale = Vector2( 1.15676, 1.21793 )
+position = Vector2( 969.399, 592.139 )
+scale = Vector2( 1.36324, 1.41983 )
 texture = ExtResource( 1 )
