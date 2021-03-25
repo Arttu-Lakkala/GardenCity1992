@@ -92,6 +92,7 @@ scale = Vector2( 2.984, 3.6 )
 ] instance=ExtResource( 5 )]
 position = Vector2( 1787.47, 1177.41 )
 scale = Vector2( 2.984, 3.6 )
+oldManHouse = true
 
 [node name="Building2" parent="." groups=[
 "Buildings",
@@ -103,7 +104,7 @@ coolHouse = true
 [node name="Building3" parent="." groups=[
 "Buildings",
 ] instance=ExtResource( 7 )]
-position = Vector2( 513.865, 343.198 )
+position = Vector2( 518.905, 343.198 )
 scale = Vector2( 2, 2.37 )
 
 [node name="Building4" parent="." groups=[

@@ -5,6 +5,7 @@ export var industryProduction = 10
 export var foodProduction = 25
 export var grandmasHouse = false
 export var coolHouse = false
+export var oldManHouse = false
 var underConstruction = false
 var state = 1
 var makeInto = 2
@@ -48,6 +49,8 @@ func activate():
 		city.UI.message(2,4)
 	elif coolHouse:
 		city.UI.message(3,8)
+	elif oldManHouse:
+		city.UI.message(4,9)
 	else:
 		if city.fieldsActivated ==0:
 			city.UI.message(1,5)
@@ -77,6 +80,8 @@ func _on_Building_input_event(viewport, event, shape_idx):
 					city.UI.message(2,10)
 				elif coolHouse:
 					city.UI.message(1,14, "Message From W.B:")
+				elif oldManHouse:
+					city.UI.message(4,15)
 				else:
 					if city.buildingsActivated ==0:
 						city.UI.message(1,11)
