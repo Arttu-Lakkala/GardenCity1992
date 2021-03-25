@@ -361,18 +361,18 @@ z_index = -1
 texture = ExtResource( 12 )
 
 [node name="UnZoomCamera" type="Camera2D" parent="."]
-position = Vector2( 1175, 625 )
-scale = Vector2( 2.35, 2.35 )
+position = Vector2( 1321.36, 558.531 )
+scale = Vector2( 1.75, 1.75 )
 current = true
-zoom = Vector2( 2.35, 2.35 )
+zoom = Vector2( 1.75, 1.75 )
 
 [node name="UI" parent="UnZoomCamera" instance=ExtResource( 4 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = -770.0
-margin_top = -425.0
-margin_right = -770.0
-margin_bottom = -425.0
+margin_left = -1015.0
+margin_top = -600.0
+margin_right = -1015.0
+margin_bottom = -600.0
 [connection signal="input_event" from="Field" to="Field" method="_on_Field_input_event"]
 [connection signal="mouse_entered" from="Field" to="Field" method="_on_Field_mouse_entered"]
 [connection signal="mouse_exited" from="Field" to="Field" method="_on_Field_mouse_exited"]

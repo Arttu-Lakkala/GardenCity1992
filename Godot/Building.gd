@@ -49,8 +49,7 @@ func _on_Building_input_event(viewport, event, shape_idx):
 		if (event is InputEventMouseButton && event.pressed):
 			if (city.industry >= 20 && not underConstruction):
 				#add more construction options here
-				city.industry = city.industry - 100
-				industryProduction = 0
+				city.industry = city.industry - 20
 				get_node("building/Construction").visible = true
 				underConstruction = true
 				$ConstructionSound.play()
