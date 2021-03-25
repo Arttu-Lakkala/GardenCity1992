@@ -38,10 +38,22 @@ func nextTurn():
 
 #happens when building gets activated
 func activate():
-	if grandmasHouse:
-		city.UI.message(2,4)
+	#activate field
 	active = true
 	$building.modulate = Color8(255,255,255)
+	
+	#sen assosiated message
+	if grandmasHouse:
+		city.UI.message(2,4)
+	else:
+		if city.fieldsActivated ==0:
+			city.UI.message(1,5)
+		elif city.fieldsActivated ==1:
+			city.UI.message(1,6)
+		elif city.fieldsActivated ==2:
+			city.UI.message(1,7)
+		city.fieldsActivated = city.fieldsActivated +1
+	
 	
 #function for clicking on this object
 func _on_Building_input_event(viewport, event, shape_idx):
@@ -56,10 +68,10 @@ func _on_Building_input_event(viewport, event, shape_idx):
 				state = 0
 
 
-func _on_Building5_mouse_entered():
-	if active && state ==1:
-		city.displayTooltip("Building", "Spend 20 material to get some food production")
+#func _on_Building5_mouse_entered():
+	#if active && state ==1:
+		#city.displayTooltip("Building", "Spend 20 material to get some food production")
 
 
-func _on_Building_mouse_exited():
-	city.hideTooltip()
+#func _on_Building_mouse_exited():
+	#city.hideTooltip()

@@ -10,7 +10,7 @@ func _ready():
 	parent = get_parent()
 	
 
-func set_popup(messageType, content_text_number, sender = "Office"):
+func set_popup(messageType, content_text_number, sender = "Message from the Citizen's Council:"):
 	#visualize correct message form
 	$browser.visible = false
 	$grandma.visible = false
@@ -18,6 +18,7 @@ func set_popup(messageType, content_text_number, sender = "Office"):
 		player = $MessageAudio
 		content = get_node("browser/BrowserContent")
 		$browser.visible = true
+		get_node("browser/BrowserSender").text = sender
 	elif messageType == 2:
 		player = $SpeachAudio
 		content = get_node("grandma/GrandmaContent")
