@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://VisualAssets/NewsPaper/Failure Screen Newspaper Final.jpg" type="Texture" id=1]
+[ext_resource path="res://VisualAssets/NewsPaper/Introductory Newspaper Cropped.jpg" type="Texture" id=2]
+[ext_resource path="res://End_Scene.gd" type="Script" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -246.0
+margin_bottom = -271.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1796.0
+margin_bottom = 1200.0
+color = Color( 0.0470588, 0.00784314, 0.00784314, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Introductory Newspaper Cropped" type="Sprite" parent="."]
+position = Vector2( 786.084, 514.776 )
+scale = Vector2( 1.15676, 1.21793 )
+texture = ExtResource( 2 )
+
+[node name="Failure Screen Newspaper Final" type="Sprite" parent="."]
+position = Vector2( 785.414, 514.776 )
+scale = Vector2( 1.17101, 1.47427 )
+texture = ExtResource( 1 )

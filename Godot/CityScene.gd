@@ -37,17 +37,7 @@ func nextTurn():
 			child.nextTurn()
 	#add food
 	food = food + food_production - consumption
-	#if not enough food reduce solidarity
-	#messages
-	if turn == 5:
-		UI.message(1, 1)
-		
-	if food <0:
-		UI.message(2, 2)
-		
 	
-	
-
 
 #Normal process of the game this is where we check for key presses etc.
 func _process(delta):
@@ -60,8 +50,8 @@ func _process(delta):
 			
 	if not messageVisable && timePassingTimer == 0:
 		if Input.is_action_just_pressed("next_turn"):
-			if food <0:
-				get_tree().reload_current_scene()
+			if food <=0:
+				get_tree().change_scene("res://Lose_Scene.tscn")
 			nextTurn()
 
 func displayTooltip(Tilte, content):
