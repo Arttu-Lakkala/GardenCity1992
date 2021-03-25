@@ -1,20 +1,20 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://UI.gd" type="Script" id=1]
 [ext_resource path="res://Message.tscn" type="PackedScene" id=2]
 [ext_resource path="res://VisualAssets/Sun.png" type="Texture" id=3]
-[ext_resource path="res://Newspaper Headline Font.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Fonts/Roboto/Roboto-Bold.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Fonts/Roboto-Black.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://UI Font.tres" type="DynamicFont" id=6]
 
 [sub_resource type="DynamicFont" id=1]
-size = 26
-outline_color = Color( 0.0509804, 0.00392157, 0.00392157, 1 )
-font_data = ExtResource( 5 )
-
-[sub_resource type="DynamicFont" id=2]
 size = 39
 outline_color = Color( 0.0627451, 0.00784314, 0.00784314, 1 )
 font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = ExtResource( 4 )
 
 [sub_resource type="Animation" id=3]
 length = 2.0
@@ -49,7 +49,7 @@ margin_left = 10.0
 margin_top = 20.0
 margin_right = 337.0
 margin_bottom = 53.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Food Production: Total (Deficit/surplus amount)"
 __meta__ = {
@@ -61,7 +61,7 @@ margin_left = 10.0
 margin_top = 80.0
 margin_right = 321.0
 margin_bottom = 112.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Material Production: Total"
 __meta__ = {
@@ -73,7 +73,7 @@ margin_left = 10.0
 margin_top = 110.0
 margin_right = 178.0
 margin_bottom = 142.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Surplus"
 __meta__ = {
@@ -85,7 +85,7 @@ margin_left = 10.0
 margin_top = 140.0
 margin_right = 214.0
 margin_bottom = 214.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Total Population:"
 __meta__ = {
@@ -97,7 +97,7 @@ margin_left = 10.0
 margin_top = 50.0
 margin_right = 125.0
 margin_bottom = 82.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Workers::"
 __meta__ = {
@@ -106,10 +106,10 @@ __meta__ = {
 
 [node name="Turn_Button" type="Label" parent="."]
 margin_left = 1755.75
-margin_top = 1062.44
+margin_top = 1063.85
 margin_right = 2123.75
-margin_bottom = 1221.44
-custom_fonts/font = SubResource( 2 )
+margin_bottom = 1222.85
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Press space to
 pass turns"
@@ -118,13 +118,13 @@ __meta__ = {
 }
 
 [node name="Date_Count" type="Label" parent="."]
-margin_left = 1904.68
+margin_left = 1889.12
 margin_top = 17.3303
-margin_right = 2020.68
+margin_right = 2016.12
 margin_bottom = 95.3303
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "turn"
+text = "Turn"
 align = 2
 __meta__ = {
 "_edit_use_anchors_": false
@@ -154,3 +154,16 @@ anims/TurnPass = SubResource( 3 )
 visible = false
 position = Vector2( -450, 1500 )
 texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 14.561
+margin_top = 1098.94
+margin_right = 392.561
+margin_bottom = 1189.94
+custom_fonts/font = ExtResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Fields require 5 workers
+New buidings need 20 solidarity"
+__meta__ = {
+"_edit_use_anchors_": false
+}
