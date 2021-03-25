@@ -41,9 +41,9 @@ func set_popup(messageType, content_text_number, sender = "Message from the Citi
 		var rnumber = rng.randi_range(1,100)
 		if(rnumber<44):
 			pass
-		elif(rnumber<66):
+		elif(rnumber<30):
 			pass
-		elif(rnumber<88):
+		elif(rnumber<60):
 			content_text_number = 36
 			messageType = 3
 		else:

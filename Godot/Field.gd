@@ -28,7 +28,7 @@ func _on_Field_input_event(viewport, event, shape_idx):
 	if not active:
 		if (event is InputEventMouseButton && event.pressed):
 			if city.labor >= 5:
-				
+				$field.self_modulate = Color8(255,255,255)
 				city.labor = city.labor - 5
 				active = true
 				city.population = city.population + startPopulation

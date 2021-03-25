@@ -27,7 +27,6 @@ __meta__ = {
 }
 
 [node name="browser" type="Sprite" parent="."]
-visible = false
 position = Vector2( 883.007, 574.522 )
 scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 1 )

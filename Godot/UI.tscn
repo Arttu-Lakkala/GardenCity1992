@@ -131,7 +131,6 @@ __meta__ = {
 }
 
 [node name="Dimmer" type="ColorRect" parent="."]
-visible = false
 modulate = Color( 0, 0, 0, 0.580392 )
 margin_left = -55.3264
 margin_top = -60.204
@@ -142,7 +141,6 @@ __meta__ = {
 }
 
 [node name="Message" parent="." instance=ExtResource( 2 )]
-visible = false
 margin_left = 125.0
 margin_right = 165.0
 
