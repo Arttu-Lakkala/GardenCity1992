@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://VisualAssets/browser.png" type="Texture" id=1]
 [ext_resource path="res://Message.gd" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Newspaper Font.tres" type="DynamicFont" id=5]
 [ext_resource path="res://AudioAssets/Message sound 2.wav" type="AudioStream" id=6]
 [ext_resource path="res://AudioAssets/Story pop up.wav" type="AudioStream" id=7]
+[ext_resource path="res://Browser content font.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Browser Sender Font.tres" type="DynamicFont" id=9]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.396078, 0.117647, 0.117647, 1 )
@@ -33,10 +35,14 @@ anchor_left = 11.136
 anchor_top = 11.092
 anchor_right = 30.007
 anchor_bottom = 22.842
-margin_left = -14696.5
-margin_top = -9451.19
-margin_right = -37932.9
-margin_bottom = -18787.4
+margin_left = -14675.5
+margin_top = -9450.4
+margin_right = -37960.9
+margin_bottom = -18829.7
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Raised beds on roofs and windows can provide vital supplements to our food production. That they also make the city look pretty is an added bonus!"
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -46,16 +52,19 @@ anchor_left = 11.136
 anchor_top = 11.092
 anchor_right = 30.007
 anchor_bottom = 22.842
-margin_left = -14694.5
-margin_top = -9548.19
-margin_right = -37942.9
-margin_bottom = -19325.4
+margin_left = -14680.3
+margin_top = -9519.47
+margin_right = -37959.7
+margin_bottom = -19322.7
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Message from the Citizen's Council:"
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="grandma" type="Sprite" parent="."]
-visible = false
 position = Vector2( 602.704, 555.505 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
