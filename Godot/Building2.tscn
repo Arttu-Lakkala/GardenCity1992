@@ -8,7 +8,7 @@
 [ext_resource path="res://VisualAssets/Buildings/building2_plantandgraffiti.png" type="Texture" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
-points = PoolVector2Array( 0, 0, 90, -40, 90, -155, 17, -185, -73, -145, -70, -35 )
+points = PoolVector2Array( 0, 0, 100, -45, 97, -250, -25, -308, -125, -260, -123, -58 )
 
 [node name="Building" type="Area2D"]
 script = ExtResource( 1 )
@@ -19,16 +19,14 @@ stream = ExtResource( 5 )
 [node name="ConstructionSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
-
 [node name="building" type="Sprite" parent="."]
 modulate = Color( 0.411765, 0.411765, 0.411765, 1 )
-position = Vector2( 58.0321, -80.3527 )
+position = Vector2( 55.6724, -82.2404 )
 scale = Vector2( 0.35434, 0.290311 )
 texture = ExtResource( 4 )
 
 [node name="plant" type="Sprite" parent="building"]
+visible = false
 position = Vector2( 1.99585, -7.30762 )
 texture = ExtResource( 6 )
 
@@ -37,3 +35,6 @@ visible = false
 position = Vector2( -214.011, -311.717 )
 scale = Vector2( 1.02761, 1.13574 )
 texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
