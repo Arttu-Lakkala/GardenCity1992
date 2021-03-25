@@ -3,9 +3,9 @@
 [ext_resource path="res://Building.gd" type="Script" id=1]
 [ext_resource path="res://AudioAssets/Shovel.wav" type="AudioStream" id=2]
 [ext_resource path="res://VisualAssets/construction.png" type="Texture" id=3]
-[ext_resource path="res://VisualAssets/Buildings/building.png" type="Texture" id=4]
+[ext_resource path="res://VisualAssets/Buildings/building2.png" type="Texture" id=4]
 [ext_resource path="res://AudioAssets/Ready.wav" type="AudioStream" id=5]
-[ext_resource path="res://VisualAssets/Buildings/building_plant.png" type="Texture" id=6]
+[ext_resource path="res://VisualAssets/Buildings/building2_plantandgraffiti.png" type="Texture" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 90, -40, 90, -155, 17, -185, -73, -145, -70, -35 )
@@ -24,12 +24,11 @@ shape = SubResource( 1 )
 
 [node name="building" type="Sprite" parent="."]
 modulate = Color( 0.411765, 0.411765, 0.411765, 1 )
-position = Vector2( 81.8163, 10.0271 )
+position = Vector2( 58.0321, -80.3527 )
 scale = Vector2( 0.35434, 0.290311 )
 texture = ExtResource( 4 )
 
 [node name="plant" type="Sprite" parent="building"]
-visible = false
 position = Vector2( 1.99585, -7.30762 )
 texture = ExtResource( 6 )
 
