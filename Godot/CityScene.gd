@@ -8,6 +8,7 @@ export var population = 0
 export var consumption = 300
 
 var warnings = 0
+var successes = 0
 var buildingsActivated = 0
 var fieldsActivated = 0
 var turn = 1
@@ -51,6 +52,14 @@ func nextTurn():
 		warnings=3
 	if(food<=consumption):
 		UI.message(1, 20)
+	
+	if(food_production>200 && successes<1):
+		successes = 1
+		UI.message(1, 25)
+	
+	if(food_production>250 && successes<2):
+		successes = 2
+		UI.message(1, 26)
 	
 
 #Normal process of the game this is where we check for key presses etc.
