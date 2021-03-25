@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=12 format=2]
+=======
+[gd_scene load_steps=11 format=2]
+>>>>>>> 66728b6c530594bcf9ace30412b8e9625d08d171
 
 [ext_resource path="res://VisualAssets/background.png" type="Texture" id=1]
 [ext_resource path="res://CityScene.gd" type="Script" id=2]
@@ -6,8 +10,12 @@
 [ext_resource path="res://UI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Building.tscn" type="PackedScene" id=5]
 [ext_resource path="res://AudioAssets/Timepass.wav" type="AudioStream" id=6]
+<<<<<<< HEAD
 [ext_resource path="res://VisualAssets/lamppost.png" type="Texture" id=7]
 [ext_resource path="res://VisualAssets/tree.png" type="Texture" id=8]
+=======
+[ext_resource path="res://Building2.tscn" type="PackedScene" id=7]
+>>>>>>> 66728b6c530594bcf9ace30412b8e9625d08d171
 [ext_resource path="res://Tooltip.tscn" type="PackedScene" id=9]
 [ext_resource path="res://AudioAssets/CityBackgroundMusic.wav" type="AudioStream" id=10]
 [ext_resource path="res://VisualAssets/TilemapBlocks/tileset.tres" type="TileSet" id=11]
@@ -84,16 +92,10 @@ grandmasHouse = true
 position = Vector2( 1888.73, 645.086 )
 scale = Vector2( 3, 3 )
 
-[node name="Building8" parent="." groups=[
-"Buildings",
-] instance=ExtResource( 5 )]
-position = Vector2( 1792.57, 1188.14 )
-scale = Vector2( 3, 3 )
-
 [node name="Building9" parent="." groups=[
 "Buildings",
 ] instance=ExtResource( 5 )]
-position = Vector2( 1040.2, 1120.26 )
+position = Vector2( 1763.61, 1177.28 )
 scale = Vector2( 3, 3 )
 
 [node name="Building11" parent="." groups=[
@@ -101,6 +103,12 @@ scale = Vector2( 3, 3 )
 ] instance=ExtResource( 5 )]
 position = Vector2( -119.451, 577.203 )
 scale = Vector2( 3, 3 )
+
+[node name="Building2" parent="." groups=[
+"Buildings",
+] instance=ExtResource( 7 )]
+position = Vector2( 1098.76, 1105.49 )
+scale = Vector2( 2, 2 )
 
 [node name="TimePassSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
@@ -390,12 +398,12 @@ texture = ExtResource( 7 )
 [connection signal="input_event" from="Building6" to="Building6" method="_on_Building_input_event"]
 [connection signal="mouse_entered" from="Building6" to="Building6" method="_on_Building5_mouse_entered"]
 [connection signal="mouse_exited" from="Building6" to="Building6" method="_on_Building_mouse_exited"]
-[connection signal="input_event" from="Building8" to="Building8" method="_on_Building_input_event"]
-[connection signal="mouse_entered" from="Building8" to="Building8" method="_on_Building5_mouse_entered"]
-[connection signal="mouse_exited" from="Building8" to="Building8" method="_on_Building_mouse_exited"]
 [connection signal="input_event" from="Building9" to="Building9" method="_on_Building_input_event"]
 [connection signal="mouse_entered" from="Building9" to="Building9" method="_on_Building5_mouse_entered"]
 [connection signal="mouse_exited" from="Building9" to="Building9" method="_on_Building_mouse_exited"]
 [connection signal="input_event" from="Building11" to="Building11" method="_on_Building_input_event"]
 [connection signal="mouse_entered" from="Building11" to="Building11" method="_on_Building5_mouse_entered"]
 [connection signal="mouse_exited" from="Building11" to="Building11" method="_on_Building_mouse_exited"]
+[connection signal="input_event" from="Building2" to="Building2" method="_on_Building_input_event"]
+[connection signal="mouse_entered" from="Building2" to="Building2" method="_on_Building5_mouse_entered"]
+[connection signal="mouse_exited" from="Building2" to="Building2" method="_on_Building_mouse_exited"]
