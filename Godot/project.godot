@@ -41,4 +41,5 @@ close_message={
 
 [rendering]
 
+environment/default_clear_color=Color( 0.901961, 0.901961, 0.901961, 1 )
 environment/default_environment="res://default_env.tres"
