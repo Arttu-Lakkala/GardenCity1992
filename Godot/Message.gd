@@ -1,6 +1,6 @@
 extends Control
 
-onready var filePath = 'res://Messages.txt'
+onready var filePath = 'res://Messages.dat'
 var parent 
 var content
 var sender
