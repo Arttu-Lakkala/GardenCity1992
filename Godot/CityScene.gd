@@ -50,7 +50,7 @@ func nextTurn():
 	if(food_production<200 && food<1500 && warnings<3):
 		UI.message(1, 19)
 		warnings=3
-	if(food<=consumption):
+	if(food + food_production<=consumption):
 		UI.message(1, 20)
 	
 	if(food_production>200 && successes<1):
