@@ -78,6 +78,9 @@ func _process(delta):
 			if food_production > consumption:
 				get_tree().change_scene("res://Win_Scene.tscn")
 			nextTurn()
+	if messageVisable:
+		if Input.is_action_just_pressed("close_message"):
+			UI.closeMessage()
 
 #func displayTooltip(Tilte, content):
 	#$Tooltip.tooltipMessage(Tilte, content)
