@@ -153,15 +153,17 @@ visible = false
 position = Vector2( -450, 1500 )
 texture = ExtResource( 3 )
 
-[node name="Label" type="Label" parent="."]
-margin_left = 14.561
-margin_top = 1098.94
-margin_right = 392.561
-margin_bottom = 1189.94
+[node name="Costs" type="Label" parent="."]
+margin_left = 15.0
+margin_top = 1041.97
+margin_right = 393.0
+margin_bottom = 1185.97
 custom_fonts/font = ExtResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Fields require 5 workers
-New buidings need 20 solidarity"
+Roof gardens need 20 solidarity
+Fields produce food & solidarity
+Workers live in buildings"
 __meta__ = {
 "_edit_use_anchors_": false
 }
